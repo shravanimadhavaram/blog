@@ -50,9 +50,10 @@ group :test, :development do
 	gem 'rspec-rails'
 	gem 'rb-readline'
 	gem 'factory_girl'
-	gem "factory_girl_rails"
+	gem 'factory_girl_rails'
 	gem 'simplecov-rcov'
 	gem 'database_cleaner'
+
 end
 
 group :test do
@@ -63,3 +64,4 @@ group :test do
 	gem 'launchy'
 
 end
+gem 'coveralls' ,require: false
