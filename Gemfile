@@ -50,7 +50,7 @@ group :test, :development do
 	gem 'rspec-rails'
 	gem 'rb-readline'
 	gem 'factory_girl'
-	gem "factory_girl_rails", "~> 2.0.0.rc4"
+	gem "factory_girl_rails"
 	gem 'simplecov-rcov'
 	gem 'database_cleaner'
 end
