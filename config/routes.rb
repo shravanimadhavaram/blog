@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  resources :posts
+
   devise_for :users
   
   # The priority is based upon order of creation: first created -> highest priority.
@@ -55,4 +57,16 @@ Blog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  
+Blog::Application.routes.draw do
+
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+  root :to => "home#index"
+  resources :users
+  resources :sessions
+  resources :password_resets
+end
 end

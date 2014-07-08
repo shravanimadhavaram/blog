@@ -44,3 +44,22 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'devise'
+
+group :test, :development do
+	gem 'rspec'
+	gem 'rspec-rails'
+	gem 'rb-readline'
+	gem 'factory_girl'
+	gem "factory_girl_rails", "~> 2.0.0.rc4"
+	gem 'simplecov-rcov'
+	gem 'database_cleaner'
+end
+
+group :test do
+	gem 'faker'
+	gem 'capybara'
+	gem 'guard'
+	gem 'guard-rspec'
+	gem 'launchy'
+
+end
