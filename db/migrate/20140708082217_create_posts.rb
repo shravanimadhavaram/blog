@@ -4,8 +4,11 @@ class CreatePosts < ActiveRecord::Migration
       t.text :post
       t.integer :user_id
       t.string :summary
-
+ 		
       t.timestamps
     end
   end
+  
+
+    
 end
