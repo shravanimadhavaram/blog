@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  resources :articles
+
   resources :posts
 
   devise_for :users
@@ -7,7 +9,7 @@ Blog::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'articles#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -58,15 +60,5 @@ Blog::Application.routes.draw do
   #     resources :products
   #   end
 
-  
-#Blog::Application.routes.draw do
 
-#  get "logout" => "sessions#destroy", :as => "logout"
-  # get "login" => "sessions#new", :as => "login"
-#  get "signup" => "users#new", :as => "signup"
- #root :to => "users#new"
- # resources :users
-  #resources :sessions
-  #resources :password_resets
-#end
 end
