@@ -15,7 +15,7 @@ RSpec.describe Post, :type => :model do
 		FactoryGirl.build(:post, summary: nil).should_not be_valid
 	end
 it "is invalid when the length of post is less than 10" do
-		FactoryGirl.build(:post, post: Faker::Loren.characters(9)).should_not be_valid
+		FactoryGirl.build(:post, post: Faker::Lorem.characters(9)).should_not be_valid
 	end
 
 end
