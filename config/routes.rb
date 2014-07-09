@@ -17,7 +17,7 @@ Blog::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+#root 'blogs#index'
   # Example resource route with options:
   #   resources :products do
   #     member do
@@ -59,14 +59,14 @@ Blog::Application.routes.draw do
   #   end
 
   
-Blog::Application.routes.draw do
+#Blog::Application.routes.draw do
 
-  get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
-  get "signup" => "users#new", :as => "signup"
-  root :to => "home#index"
-  resources :users
-  resources :sessions
-  resources :password_resets
-end
+#  get "logout" => "sessions#destroy", :as => "logout"
+  # get "login" => "sessions#new", :as => "login"
+#  get "signup" => "users#new", :as => "signup"
+ #root :to => "users#new"
+ # resources :users
+  #resources :sessions
+  #resources :password_resets
+#end
 end
