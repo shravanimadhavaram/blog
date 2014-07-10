@@ -237,6 +237,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc
+  simplecov
   simplecov-rcov
   sqlite3
   turbolinks

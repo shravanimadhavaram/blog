@@ -15,6 +15,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= User.find(post.user_id).email %></td>
         <td><%= post.post %></td>
         <td><%= post.user_id %></td>
         <td><%= post.summary %></td>
