@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @comment.context %>
+</p>
+
+<p>
+  <strong>Commentable:</strong>
+  <%= @comment.commentable_id %>
+</p>
+
+<p>
+  <strong>Commentable string:</strong>
+  <%= @comment.commentable_string %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

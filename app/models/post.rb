@@ -7,5 +7,6 @@ validates_presence_of :user_id
 validates_presence_of :summary
 
 belongs_to :user
+has_many :comments, :as => :commentable
 
 end
