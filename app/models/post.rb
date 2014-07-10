@@ -6,6 +6,6 @@ validates :post, length: { minimum: 10 }
 validates_presence_of :user_id
 validates_presence_of :summary
 
-
+belongs_to :user
 
 end
