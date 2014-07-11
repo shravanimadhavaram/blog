@@ -11,6 +11,7 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+   gem 'rails_layout'
 end
 
 # Use SCSS for stylesheets
@@ -37,6 +38,8 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+
+
 end
 
 # Use ActiveModel has_secure_password
@@ -76,3 +79,9 @@ gem 'coveralls' ,require: false
 #gem 'rails_12factor', group: :production
 ruby "2.0.0"
 gem 'simplecov', :require => false, :group => :test
+
+gem 'therubyracer'
+gem 'less-rails'
+ gem 'twitter-bootstrap-rails', '~> 2.2.8'
+
+ gem 'formtastic', '~> 2.2.1'

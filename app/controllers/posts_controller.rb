@@ -11,6 +11,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post = Post.find(params[:id])
+     @comment=Comment.new
+     @comment.commentable= @post
   end
 
   # GET /posts/new
@@ -72,4 +75,10 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:post, :user_id, :summary)
     end
+
+   def create
+                @post = Post.find(params[:post_id])
+                @comment = @post.comments.create!(params[:comment])
+                redirect_to @post
+        end
 end

@@ -16,7 +16,38 @@
 </p>
 
 	
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong>Content:</strong>
+    <%= @comment.context%>
 
-<%= link_to 'comments',comments_path%>
+  </p>
+   <p>
+    <strong>Comment:</strong>
+    <%= comment.commentable_id %>
+  </p>
+ 
+  
+<% end %>
+  
+  <h2>Add a comment:</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :context %><br>
+    <%= f.text_field :context %>
+  </p>
+    <p>
+    <%= f.label :commentable_id%><br>
+    <%= f.text_area :commentable_id %>
+  </p>
+ 
+  
+  <p>
+    <%= f.submit %>
+  </p>
+
+
 <%= link_to 'Edit', edit_post_path(@post) %> 
 <%= link_to 'Back', posts_path %>
+<% end %>
