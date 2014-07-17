@@ -75,10 +75,12 @@ render_views
 
   describe "ARTICLE create" do
     it "has a 200 status code" do
-      post :create , :article => {:id => '3', :article => 'uyubububu'}
+      post :create , :article => {:id => '3', :article => 'uyugvgbububu'}
       expect(response.status).to eq(302)
         # Warden.test_reset!
     end
+
+    
   end
 
  
@@ -110,17 +112,12 @@ describe "PUT update" do
         put :update, {:id => @article.id, article: @article.attributes}
         expect(assigns(:article)).to eq(@article)
       end
-
+      
       
     end
   end
 
-
-
-
-
-
-  describe "DELETE destroy" do
+ describe "DELETE destroy" do
     it "destroys the requested article" do
       article = Article.create! 
       expect {

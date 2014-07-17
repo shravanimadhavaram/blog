@@ -25,7 +25,6 @@ include Devise::TestHelpers
   # login_user
 
 def login_user(user)
-    @user = FactoryGirl.create(:user)
     sign_in user
 end
 
@@ -73,6 +72,13 @@ end
       expect(response.status).to eq(302)
         # Warden.test_reset!
     end
+    it "redirects to root_path if blogs params are not validated" do
+      login_user(FactoryGirl.create(:user))
+      post :create, :post => {:post => 'hisc' , :summary=> 'swxwc' , :user_id => '3'}
+      #get :show, id: b.id
+     expect(subject).to render_template("new")
+   end
+
   end
 
  describe "PUT update" do
@@ -107,7 +113,14 @@ end
         put :update, {:id => @post.id, post: @post.attributes}
         expect(assigns(:post)).to eq(@post)
       end
-
+    
+    it "re-renders the 'edit' template" do
+        login_user(FactoryGirl.create(:user))
+       @post= FactoryGirl.create(:post)
+        @post.post = nil
+        put :update, {:id => @post.id, post: @post.attributes}
+        expect(response).to render_template("posts/edit")
+      end
       
     end
   end
