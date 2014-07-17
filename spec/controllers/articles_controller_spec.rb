@@ -113,7 +113,7 @@ describe "PUT update" do
         expect(assigns(:article)).to eq(@article)
       end
       
-      
+     
     end
   end
 
