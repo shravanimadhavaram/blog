@@ -15,19 +15,18 @@
   <%= @post.summary %>
 </p>
 
-	
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
   <p>
+    
     <strong>Content:</strong>
     <%= comment.context%>
-
+    
   </p>
- 
-  
 <% end %>
-  
-  <h2>Add a comment:</h2>
+
+ 
+ <h2>Add a comment:</h2>
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <p>
     <%= f.label :context %><br>
@@ -38,6 +37,7 @@
   <p>
     <%= f.submit %>
   </p>
+
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> 

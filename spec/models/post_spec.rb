@@ -14,8 +14,11 @@ RSpec.describe Post, :type => :model do
 	it "is invalid without summary" do
 		FactoryGirl.build(:post, summary: nil).should_not be_valid
 	end
-it "is invalid when the length of post is less than 10" do
+    it "is invalid when the length of post is less than 10" do
 		FactoryGirl.build(:post, post: Faker::Lorem.characters(9)).should_not be_valid
 	end
-
+	# it "is invalid when summary is not equal to post" do
+		# FactoryGirl.build(:post, summary: != post.post[0..9]).should_not be_valid
+		# (Post.summary != Post.post[0..9]).should_not be_valid
+	# end
 end

@@ -29,6 +29,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
@@ -76,9 +77,4 @@ class PostsController < ApplicationController
       params.require(:post).permit(:post, :user_id, :summary)
     end
 
-   def create
-                @post = Post.find(params[:post_id])
-                @comment = @post.comments.create!(params[:comment])
-                redirect_to @post
-        end
 end

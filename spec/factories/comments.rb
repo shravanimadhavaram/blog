@@ -4,6 +4,6 @@ FactoryGirl.define do
   factory :comment do
     context "MyText"
     commentable_id 1
-    commentable_string "MyString"
+    commentable_type "MyString"
   end
 end

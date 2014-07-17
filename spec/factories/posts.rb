@@ -3,8 +3,8 @@
 FactoryGirl.define do
 
   factory :post do
-    post "MyText"
+    post "MyTextstringfestsdfsad"
     user_id 1
-    summary "MyString"
+    summary "fsdfsad"
   end
 end

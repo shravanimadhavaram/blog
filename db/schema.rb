@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20140711095710) do
     t.text     "post"
     t.integer  "user_id"
     t.string   "summary"
+    t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "mobile"
     t.integer  "userid"
   end
 

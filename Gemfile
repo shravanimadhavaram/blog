@@ -89,3 +89,8 @@ gem 'less-rails'
  gem 'formtastic', '~> 2.2.1'
 
  gem 'haml-rails'
+
+ 	
+gem 'cancan'
+
+

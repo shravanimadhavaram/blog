@@ -16,13 +16,20 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        
+
         <td><%= User.find(post.user_id).email %></td>
         <td><%= post.post %></td>
         <td><%= post.user_id %></td>
         <td><%= post.summary %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <% if current_user.email==User.find(post.user_id).email %>
+          <td><%= link_to 'Show', post %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <% else %>
+          <td><%= link_to 'Show', post %></td>
+        <% end %>         
       </tr>
     <% end %>
   </tbody>
