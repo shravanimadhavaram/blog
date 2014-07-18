@@ -10,6 +10,7 @@ require 'coveralls'
 ENV["RAILS_ENV"]  ||='test'
 require File.expand_path("../../config/environment", __FILE__)
 require "capybara/rspec"
+require 'database_cleaner'
 require 'rspec/rails'
 
 # The generated `.rspec` file contains `--require spec_helper` which will cause this

@@ -62,13 +62,15 @@ group :test, :development do
 	gem 'factory_girl'
 	gem 'factory_girl_rails'
 	gem 'simplecov-rcov'
-	gem 'database_cleaner'
+	
 
 end
 
 group :test do
 	gem 'faker'
 	gem 'capybara'
+	gem 'cucumber-rails'
+	gem 'database_cleaner'
 	gem 'guard'
 	gem 'guard-rspec'
 	gem 'launchy'
