@@ -46,18 +46,7 @@ RSpec.describe "Login" do
   	click_button 'Update Post'
   end
 
-  it "delete a post" do
-  	user = FactoryGirl.create(:user)
-  	login_as(user, :scope=> :user)
-  	post = FactoryGirl.create(:post)
-  	visit new_post_path
-	fill_in "Post", with: 'cscasdcesdc'
-  	fill_in "Summary", with: 'erfdca'
-  	click_button 'Create Post'
-  	click_link 'Back'
-  	click_link 'Destroy'
-
-  end
+ 
 
 
 end
