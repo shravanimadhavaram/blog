@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+gem 'arel'
+
 
 # Use sqlite3 as the database for Active Record
 group :production do
@@ -11,6 +13,7 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+   gem 'rails_layout'
 end
 
 # Use SCSS for stylesheets
@@ -37,6 +40,8 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+
+
 end
 
 # Use ActiveModel has_secure_password
@@ -59,13 +64,15 @@ group :test, :development do
 	gem 'factory_girl'
 	gem 'factory_girl_rails'
 	gem 'simplecov-rcov'
-	gem 'database_cleaner'
+	
 
 end
 
 group :test do
 	gem 'faker'
 	gem 'capybara'
+	gem 'cucumber-rails'
+	gem 'database_cleaner'
 	gem 'guard'
 	gem 'guard-rspec'
 	gem 'launchy'
@@ -76,3 +83,19 @@ gem 'coveralls' ,require: false
 #gem 'rails_12factor', group: :production
 ruby "2.0.0"
 gem 'simplecov', :require => false, :group => :test
+
+gem 'therubyracer'
+gem 'less-rails'
+ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+ 
+ gem 'autoprefixer-rails'
+
+ gem 'formtastic', '~> 2.2.1'
+
+ gem 'haml-rails'
+
+ 	
+gem 'cancan'
+
+
+

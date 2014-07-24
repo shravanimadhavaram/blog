@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140710120655) do
+ActiveRecord::Schema.define(version: 20140711095710) do
 
   create_table "articles", force: true do |t|
     t.string   "summary"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140710120655) do
   create_table "comments", force: true do |t|
     t.text     "context"
     t.integer  "commentable_id"
-    t.string   "commentable_string"
+    t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20140710120655) do
     t.text     "post"
     t.integer  "user_id"
     t.string   "summary"
+    t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "mobile"
     t.integer  "userid"
   end
 

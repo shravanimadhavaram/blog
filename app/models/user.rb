@@ -4,12 +4,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-class Person
-  include ActiveModel::Validations
 
-  attr_accessor :Email
-
-end
 has_many :post
 User.attribute_method?(:Email) # => true
 User.attribute_method?(:Password)  # => false

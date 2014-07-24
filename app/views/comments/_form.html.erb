@@ -12,17 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :context %><br>
-    <%= f.text_area :context %>
+    <%= f.label :comment%><br>
+    <%= f.text_area :context%>
   </div>
   <div class="field">
-    <%= f.label :commentable_id %><br>
+    <%= f.label :id %><br>
     <%= f.number_field :commentable_id %>
   </div>
-  <div class="field">
-    <%= f.label :commentable_string %><br>
-    <%= f.text_field :commentable_string %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

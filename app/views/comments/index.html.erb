@@ -3,9 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Context</th>
-      <th>Commentable</th>
-      <th>Commentable string</th>
+      
+      <th>Comment</th>
+      <th>Comment id</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,9 +15,10 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
+        
         <td><%= comment.context %></td>
         <td><%= comment.commentable_id %></td>
-        <td><%= comment.commentable_string %></td>
+        
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
