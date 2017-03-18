@@ -5,3 +5,5 @@
 [![Coverage Status](https://coveralls.io/repos/shravanimadhavaram/blog/badge.png)](https://coveralls.io/r/shravanimadhavaram/blog)
 
 http://vast-brook-8931.herokuapp.com/
+
+Blog where we can login and write posts, delete posts and edit them.
